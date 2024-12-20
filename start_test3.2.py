@@ -2,6 +2,7 @@ import unittest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import time
+import pytest
 
 class TestNew(unittest.TestCase):
 
@@ -64,5 +65,7 @@ class TestNew(unittest.TestCase):
         # с помощью self.assertEqual проверяем, что ожидаемый текст совпадает с текстом на странице сайта
         self.assertEqual("Congratulations! You have successfully registered!", welcome_text, "Текст не совпадает с финальным окном")
 
+#if __name__ == "__main__":
+    #unittest.main()
 if __name__ == "__main__":
-    unittest.main()
+    pytest.main()
